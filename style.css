@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+* {
+    margin : 0;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Navbar  */
+
+header{
+    width    : 100%;
+    position : fixed;
+    top : 0;
+    left :0;
+    z-index  : 99;
+    padding: .8em;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0px 2px 8px -1px rgba(0,0,0,0.45);
+}
+
+header nav .logo{
+    display: flex;
+    align-items: center;
+    color:#333;
+}
+header nav .logo>h1{
+    font-size: medium;
+    font-weight: 700;
+    margin: 0 8px;
+}
+
+
+header nav ul li {
+    margin: .4em .8em;
+}
+
+header nav ul li:nth-child(1) {
+    margin-left: 0!important;
+}
+
+header nav ul li>a {
+    font-size: small;
+    color: #333;
+    transition: all 0.2s ease-in ;
+}
+header nav ul li>a:hover {
+    color: #bbb;
+}
+
+/* Main */
+
+main {
+    max-width: 1360px;
+    position :relative;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section */
+
+section {
+    position : relative;
+    padding : 3em 2em;
+    margin-top: 1.5em;
+}
+
+/* About Section */
+section#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#about .about-me{
+    margin: 1em 0;
+    text-align: center;
+    order: 2;
+}
+
+section#about .about-me>h3{
+    font-size: 1.5em;
+    margin: .2em 0;
+    color: #333;
+}
+
+section#about .about-me>p{
+    margin: .2em 0;
+    color: #333;
+}
+
+section#about .about-me>ul{
+    width: 25%;
+    display :flex;
+    justify-content: space-between;
+    margin: 1em auto;
+    padding: 0;
+}
+section#about .about-me>ul li a{
+    transition: all 0.2s ease-in ;
+}
+section#about .about-me>ul li a:hover{
+    filter: invert(75%) 
+}
+
+section#about figure{
+    width: 240px;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+section#about figure>img{
+    width: 100%;
+}
+
+/* Section Education */
+
+section#education, section#contact {
+    background-color: #ededed;
+    text-align: center;
+    margin-top : 3em;
+}
+
+section#education h3, section#contact h3,section#portofolio h3 {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+section#education h3::after, section#contact h3::after,section#portofolio h3::after{
+    position: absolute;
+    content: " ";
+    width: 25%;
+    height: 3px;
+    background-color: #333;
+    bottom: -6px; 
+    margin: 0 auto;
+	left: 0;
+    right: 0;
+
+}
+
+section#education ul{
+    display : flex;
+    justify-content:space-evenly ;
+    padding: 3em 0;
+}
+
+section#education ul li>p:nth-child(2){
+    font-weight: 700;
+}
+
+section#education ul li>p:nth-child(3){
+    font-size: small;
+}
+
+/* Section Portofolio */
+
+section#portofolio {
+    text-align: center;
+}
+
+section#portofolio .container-card{
+    display : grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 3em;
+    padding: 3em 0;
+}
+
+
+section#portofolio .portofolio-card{
+    margin: 2em auto;
+    width: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 17px -7px rgba(0,0,0,0.75);
+}
+
+section#portofolio .portofolio-card figure>figcaption {
+    padding : 1.2em 0.8em
+}
+
+section#portofolio .portofolio-card figure>figcaption p{
+    margin: .4em 0;
+    font-size: small;
+}
+
+/* Contact Me */
+
+
+
+
+section#contact form>button {
+    padding: 6px 12px;
+    color: #eee;
+    background-color: #333;
+    margin: 0 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+section#contact form>button:hover{
+    background-color: #bbb;
+    color: #333;
+}
+
+section#contact .input-form{
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+}
+
+section#contact .input-form>input,
+section#contact .input-form>textarea{
+    border: none;
+    margin: 6px;
+    padding: 4px 6px;
+    border-radius: 10px;
+    height: 3em;
+}
+
+section#contact .input-form>textarea{
+    height: 6em;
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Responsive Mobile */
+@media only screen and (min-width : 1080px) {
+    section {
+        position : relative;
+        padding : 3em 6em;
+    }
+    
+    section#about{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section#about figure{
+        width: 300px;
+        height: 340px;
+        order: 2;
+    }
+    
+    section#about .about-me{
+        margin: 0;
+        text-align: start;
+        order: 1;
+    }
+
+    section#about .about-me>ul{
+        margin: 1em 0;
+    }
+
+    section#portofolio .container-card{
+    grid-template-columns: auto auto auto;
+}
+
+    section#contact form{
+        width: 50%!important;
+    }
+}
+
+
+@media only screen and (min-width : 640px){
+    header nav {
+        display: flex!important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav ul {
+        display : flex;
+        justify-content: end;
+        margin: 0 .8em !important;
+    }
+}
+
+@media only screen and (min-width : 320px){
+    header nav {
+        display: block;
+    }
+
+    header nav ul {
+        display : flex;
+        margin: 0 auto;
+        padding-inline-start: 0!important;
+    }
+
+    section#contact form{
+        width: 100%;
+        padding: 3em 0;
+        margin: 0 auto;
+        text-align: start;
+    }
+}
